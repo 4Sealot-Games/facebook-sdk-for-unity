@@ -10,10 +10,10 @@
     <UNITY_NETWORKING_DIR>NONE</UNITY_NETWORKING_DIR>
   </PropertyGroup>
   <PropertyGroup Condition="'$(UNITY_VERSION)' == '2017'">
-    <UNITY_MANAGED_DIR>/Applications/Unity/Unity.app/Contents/Managed/</UNITY_MANAGED_DIR>
-    <UNITY_UI_DIR>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/</UNITY_UI_DIR>
-    <UNITY_ENGINE_DIR>/Applications/Unity/Unity.app/Contents/Managed/</UNITY_ENGINE_DIR>
-    <UNITY_EXTENSIONS_DIR>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/</UNITY_EXTENSIONS_DIR>
+    <UNITY_MANAGED_DIR>D:\Programs\2017.4.40f1\Editor\\Data\Managed\</UNITY_MANAGED_DIR>
+    <UNITY_UI_DIR>D:\Programs\2017.4.40f1\Editor\\Data\UnityExtensions\Unity\GUISystem\</UNITY_UI_DIR>
+    <UNITY_ENGINE_DIR>D:\Programs\2017.4.40f1\Editor\\Data\Managed\</UNITY_ENGINE_DIR>
+    <UNITY_EXTENSIONS_DIR>D:\Programs\2017.4.40f1\Editor\\Data\UnityExtensions\Unity\</UNITY_EXTENSIONS_DIR>
     <UNITY_NETWORKING_DIR>NONE</UNITY_NETWORKING_DIR>
   </PropertyGroup>
   <PropertyGroup Condition="'$(UNITY_VERSION)' == '2018'">

@@ -59,7 +59,7 @@ namespace Facebook.Unity.Editor
         {
             this.filePath = fullPath;
             XmlReaderSettings settings = new XmlReaderSettings();
-            settings.ProhibitDtd = false;
+            settings.DtdProcessing = DtdProcessing.Parse;
             XmlReader plistReader = XmlReader.Create(this.filePath, settings);
 
             XDocument doc = XDocument.Load(plistReader);

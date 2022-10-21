@@ -57,7 +57,7 @@ else {
 
     Write-Output ""
     Write-Output "Searching Unity versions ..."
-    $unity_versions = Get-ChildItem -Path "c:\Program Files" -Filter "unity.exe" -Recurse | Select-Object Fullname | Format-List | Out-String
+    $unity_versions = Get-ChildItem -Path "D:\Programs" -Filter "unity.exe" -Recurse | Select-Object Fullname | Format-List | Out-String
 
     Write-Output ""
     Write-Output "Processing Unity folders ..."
@@ -107,6 +107,7 @@ else {
             $TARGET_PATH = $array_unity_path[$SELECTED_VERSION]
             Write-Output ""
             Write-Output "You has been selected unity version: "$TARGET_VERSION
+            Write-Output "Path: "$TARGET_PATH 
             Write-Output ""
         }
         else {
@@ -133,21 +134,11 @@ if ( $TARGET_VERSION -eq "NONE" ) {
 }
 
 #define full paths for unity version
-switch ($TARGET_VERSION) {
-    '2017.4.40f1' {
-        $UNITY_MANAGED_DIR = "$TARGET_PATH\Data\Managed\"
-        $UNITY_UI_DIR = "$TARGET_PATH\Data\UnityExtensions\Unity\GUISystem\"
-        $UNITY_ENGINE_DIR = "$TARGET_PATH\Data\Managed\"
-        $UNITY_EXTENSIONS_DIR = "$TARGET_PATH\Data\UnityExtensions\Unity\"
-        $TARGET_VERSION = 2017;
-    }
-    default {
-        Write-Output ""
-        Write-Output "Please use Unity 2017.4.40f1 to work with UnitySDK project on Windows devices."
-        Write-Output ""
-        exit 1
-    }
-}
+$UNITY_MANAGED_DIR = "$TARGET_PATH\Data\Managed\"
+$UNITY_UI_DIR = "$TARGET_PATH\Data\UnityExtensions\Unity\GUISystem\"
+$UNITY_ENGINE_DIR = "$TARGET_PATH\Data\Managed\"
+$UNITY_EXTENSIONS_DIR = "$TARGET_PATH\Data\UnityExtensions\Unity\"
+$TARGET_VERSION = 2017;
 
 #Replace Unity path in UnityReferences.xml
 $unity_references_file = "$PWD\UnityReferences.xml"

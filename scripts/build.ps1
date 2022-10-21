@@ -59,7 +59,7 @@ foreach ($PROJECT in $projects_array) {
     Set-Content -Path ".\$PROJECT\Properties\AssemblyInfo.cs" -Value $newContent
 }
 
-$msbuild_path = (&"${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -prerelease -products * -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe)
+$msbuild_path = "D:\Programs\JetBrains Rider 2021.3.2\tools\MSBuild\Current\Bin\MSBuild.exe"
 $parameters = "$PWD\Facebook.sln"
 $add = "/property:Configuration=Release"
 
